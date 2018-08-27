@@ -26,15 +26,17 @@ public class App {
 //        dao.atualizar(new Pessoa("111.111.111-01",
 //                "João Paulo", 22));
 
-        VendaDao dao = new VendaDao();
+        VendaDao daoVenda = new VendaDao();
 
-        System.out.println(dao.listar());
+        System.out.println(daoVenda.listar());
 
 //        Produto produto1 = new Produto(1, "Teclado", 30);
 //        Produto produto2 = new Produto(2, "Mouse", 20);
+          Produto produto3 = new Produto(3, "MousePad", 50);
 //
 //        ItemVenda item1 = new ItemVenda(produto1, 1);
 //        ItemVenda item2 = new ItemVenda(produto2, 2);
+          ItemVenda item3 = new ItemVenda(produto3, 1);
 //
 //        List<ItemVenda> itens = new ArrayList<>();
 //        itens.add(item1);
@@ -43,8 +45,8 @@ public class App {
 //        Venda venda = new Venda(1, itens, LocalDateTime.now());
 //
 //        dao.salvar(venda);
-
-
+        System.out.println(daoVenda.atualizarVenda(1, item3));
+//        System.out.println(daoVenda.buscaPorCodigo(1));
+//        System.out.println(daoVenda.deletarPorCodigo(1));
     }
-
 }
